@@ -1,0 +1,239 @@
+/* General styling */
+.todos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .todos-title {
+    font-size: 2.5rem;
+    color: #23a363;
+    margin-bottom: 20px;
+  }
+  
+  .todos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .todo-item {
+    background: linear-gradient(135deg, #4f0f8f, #1a59c6);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(130, 35, 35, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .todo-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .todo-name,
+  .todo-created-by,
+  .todo-age,
+  .todo-completed {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .todo-btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+  
+  .edit-btn {
+    background-color: #03a9f4;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0288d1;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .todos-title {
+      font-size: 2rem;
+    }
+  
+    .todo-item {
+      padding: 15px;
+    }
+  
+    .todo-btn {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  }
+
+
+  /* Edit page css */
+
+  /* General styling */
+.edit-todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.edit-todo-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.edit-todo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-todo-input,
+.edit-todo-select {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.edit-todo-input:focus,
+.edit-todo-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.edit-todo-submit {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.edit-todo-submit:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .edit-todo-container {
+    padding: 15px;
+  }
+
+  .edit-todo-title {
+    font-size: 2rem;
+  }
+
+  .edit-todo-input,
+  .edit-todo-select,
+  .edit-todo-submit {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+  /* create form css */
+  /* Container styling */
+.create-todo-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.create-todo-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form styling */
+.create-todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input field styling */
+.create-todo-input,
+.create-todo-select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #a1c4fd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.create-todo-input:focus,
+.create-todo-select:focus {
+  outline: none;
+  border-color: #3f72af;
+  box-shadow: 0 0 5px rgba(63, 114, 175, 0.5);
+}
+
+/* Submit button styling */
+.create-todo-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.create-todo-submit:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .create-todo-container {
+    padding: 15px;
+  }
+
+  .create-todo-title {
+    font-size: 1.8rem;
+  }
+
+  .create-todo-input,
+  .create-todo-select,
+  .create-todo-submit {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
